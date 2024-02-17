@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background: linear-gradient(to top left, red, purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 80%;
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.7rem;
+  position: relative;
+  overflow: auto;
+  z-index: 4;
+}
+.overlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+}
+.new-game,
+.roll-dice,
+.hold {
+  color: #555;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 10rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+  left: 50%;
+  z-index: 10;
+  font-size: 1.2rem;
+  border: 0;
+  cursor: pointer;
+}
+.new-game {
+  top: 10%;
+  transform: translate(-50%, -10%);
+  padding: 0.6rem 1.5rem;
+}
+.roll-dice {
+  top: 70%;
+  transform: translate(-50%, -70%);
+  padding: 0.6rem 1.2rem;
+}
+.hold {
+  top: 82%;
+  padding: 0.4rem 1rem;
+  transform: translate(-50%, -82%);
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  z-index: 10;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  gap: 1.6rem;
+}
+.player-title {
+  color: #333;
+}
+.player-score {
+  font-size: 5rem;
+  color: rgb(150, 34, 85, 1);
+}
+.current {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(150, 34, 85, 0.8);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1.8rem 5rem;
+  border-radius: 0.7rem;
+  gap: 0.8rem;
+}
+.current-score {
+  font-size: 2rem;
+}
