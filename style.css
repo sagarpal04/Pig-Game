@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 .container {
-  height: 75%;
+  height: 80%;
   width: 65%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -119,8 +119,9 @@ section {
 }
 .player-winner {
   background-color: #333;
+  transition: all 1.6s ease;
 }
 .player-winner .player-title {
   color: rgb(150, 34, 85, 1);
 }
-/* Project Done */
+/* Project Done - done*/

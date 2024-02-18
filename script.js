@@ -9,7 +9,7 @@ const newGame = document.querySelector(".new-game");
 const rollDice = document.querySelector(".roll-dice");
 const hold = document.querySelector(".hold");
 const dice = document.querySelector(".dice");
-const scoreArray = [0, 0];
+let scoreArray = [0, 0];
 let current = 0;
 let playerNumber = 0;
 let playing = true;
@@ -63,4 +63,19 @@ hold.addEventListener("click", function () {
     switchOverlay();
   }
 });
-// Project Done
+newGame.addEventListener("click", function () {
+  scoreArray = [0, 0];
+  current = 0;
+  player0.textContent = "0";
+  player1.textContent = "0";
+  if (sectionLeft.classList.contains("player-winner")) {
+    sectionLeft.classList.remove("player-winner");
+  } else {
+    sectionRight.classList.remove("player-winner");
+  }
+  playing = true;
+  setCurrent(playerNumber); // Update current scores
+  sectionLeft.classList.add("overlay");
+  sectionRight.classList.remove("overlay");
+  playerNumber = 0;
+});
