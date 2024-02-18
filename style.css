@@ -23,10 +23,7 @@ body {
   z-index: 4;
 }
 .overlay {
-  position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
-  width: 50%;
-  height: 100%;
   z-index: 5;
 }
 .new-game,
@@ -38,13 +35,21 @@ body {
 
   border-radius: 10rem;
   text-transform: uppercase;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
   left: 50%;
   z-index: 10;
   font-size: 1.2rem;
   border: 0;
   cursor: pointer;
+  transition: all 0.1s ease;
 }
+.new-game:active,
+.roll-dice:active,
+.hold:active {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  transform: translate(-50%.3px);
+}
+
 .new-game {
   top: 10%;
   transform: translate(-50%, -10%);
@@ -97,4 +102,17 @@ section {
 }
 .current-score {
   font-size: 2rem;
+}
+.dice {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -34%);
+  height: 16%;
+  width: auto;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
+  z-index: 15;
+}
+.hidden {
+  display: none;
 }
